@@ -31,6 +31,7 @@
             loadImgButton = new Button();
             openFileDialog1 = new OpenFileDialog();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,11 +60,22 @@
             pictureBox1.TabStop = false;
             pictureBox1.MouseClick += addMarkerClick;
             // 
+            // button1
+            // 
+            button1.Location = new Point(181, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 23);
+            button1.TabIndex = 2;
+            button1.Text = "Clear Markers";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += clearMarkers;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 720);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(loadImgButton);
             Name = "Form1";
@@ -76,5 +88,6 @@
         private Button loadImgButton;
         private OpenFileDialog openFileDialog1;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }
