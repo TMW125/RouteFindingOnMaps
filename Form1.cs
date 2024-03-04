@@ -4,7 +4,6 @@ namespace RouteFindingOnMaps
 {
     public partial class Form1 : Form
     {
-        // 12, 41 picture corner
         bool addMarker;
         public Form1()
         {
