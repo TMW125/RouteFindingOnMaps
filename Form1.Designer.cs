@@ -57,6 +57,7 @@
             pictureBox1.Size = new Size(1256, 667);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.MouseClick += addMarkerClick;
             // 
             // Form1
             // 

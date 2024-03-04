@@ -4,7 +4,6 @@ namespace RouteFindingOnMaps
 {
     public partial class Form1 : Form
     {
-        // 12, 41 picture corner
         bool addMarker;
         public Form1()
         {
@@ -28,6 +27,18 @@ namespace RouteFindingOnMaps
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void addMarkerClick(object sender, MouseEventArgs e)
+        {
+            if (addMarker)
+            {
+                Label label = new Label();
+                label.Location = e.Location;
+                label.Text = e.Location.ToString();
+                label.BackColor = Color.Transparent;
+                pictureBox1.Controls.Add(label);
+            }
         }
     }
 }
