@@ -4,7 +4,8 @@ namespace RouteFindingOnMaps
 {
     public partial class Form1 : Form
     {
-        bool addMarker;
+        private bool addMarker;
+        private List<Point> markers;
         public Form1()
         {
             InitializeComponent();
@@ -23,13 +24,9 @@ namespace RouteFindingOnMaps
                 mapImage.Image = image;
                 mapImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 addMarker = true;
+                markers = new List<Point>();
             }
         }
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
         private void addMarkerClick(object sender, MouseEventArgs e)
         {
             if (addMarker)
@@ -39,11 +36,22 @@ namespace RouteFindingOnMaps
                 label.Text = e.Location.ToString();
                 label.BackColor = Color.Transparent;
                 mapImage.Controls.Add(label);
+                markers.Add(e.Location);
             }
         }
         private void clearMarkers(object sender, EventArgs e)
         {
             mapImage.Controls.Clear();
+        }
+        private void findShortestPath(object sender, EventArgs e)
+        {
+            if (addMarker)
+            {
+                foreach (Point mark in markers)
+                {
+                    
+                }
+            }
         }
     }
 }

@@ -32,6 +32,7 @@
             openFileDialog1 = new OpenFileDialog();
             mapImage = new PictureBox();
             clearMarkerButton = new Button();
+            findPathButton = new Button();
             ((System.ComponentModel.ISupportInitialize)mapImage).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +50,6 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif|All files|*.*";
-            openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
             // mapImage
             // 
@@ -70,6 +70,16 @@
             clearMarkerButton.UseVisualStyleBackColor = true;
             clearMarkerButton.Click += clearMarkers;
             // 
+            // findPathButton
+            // 
+            findPathButton.Location = new Point(350, 12);
+            findPathButton.Name = "findPathButton";
+            findPathButton.Size = new Size(163, 23);
+            findPathButton.TabIndex = 3;
+            findPathButton.Text = "Find shortest Path";
+            findPathButton.UseVisualStyleBackColor = true;
+            findPathButton.Click += findShortestPath;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -78,6 +88,7 @@
             Controls.Add(clearMarkerButton);
             Controls.Add(mapImage);
             Controls.Add(loadImgButton);
+            Controls.Add(findPathButton);
             Name = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)mapImage).EndInit();
@@ -89,5 +100,6 @@
         private OpenFileDialog openFileDialog1;
         private PictureBox mapImage;
         private Button clearMarkerButton;
+        private Button findPathButton;
     }
 }
