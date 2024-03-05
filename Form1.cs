@@ -20,8 +20,8 @@ namespace RouteFindingOnMaps
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(ofd.FileName);
-                pictureBox1.Image = image;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                mapImage.Image = image;
+                mapImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 addMarker = true;
             }
         }
@@ -38,12 +38,12 @@ namespace RouteFindingOnMaps
                 label.Location = e.Location;
                 label.Text = e.Location.ToString();
                 label.BackColor = Color.Transparent;
-                pictureBox1.Controls.Add(label);
+                mapImage.Controls.Add(label);
             }
         }
         private void clearMarkers(object sender, EventArgs e)
         {
-            pictureBox1.Controls.Clear();
+            mapImage.Controls.Clear();
         }
     }
 }

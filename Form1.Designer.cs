@@ -30,9 +30,9 @@
         {
             loadImgButton = new Button();
             openFileDialog1 = new OpenFileDialog();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            mapImage = new PictureBox();
+            clearMarkerButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)mapImage).BeginInit();
             SuspendLayout();
             // 
             // loadImgButton
@@ -51,43 +51,43 @@
             openFileDialog1.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif|All files|*.*";
             openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
-            // pictureBox1
+            // mapImage
             // 
-            pictureBox1.Location = new Point(12, 41);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1256, 667);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.MouseClick += addMarkerClick;
+            mapImage.Location = new Point(12, 41);
+            mapImage.Name = "mapImage";
+            mapImage.Size = new Size(1256, 667);
+            mapImage.TabIndex = 1;
+            mapImage.TabStop = false;
+            mapImage.MouseClick += addMarkerClick;
             // 
-            // button1
+            // clearMarkerButton
             // 
-            button1.Location = new Point(181, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Clear Markers";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += clearMarkers;
+            clearMarkerButton.Location = new Point(181, 12);
+            clearMarkerButton.Name = "clearMarkerButton";
+            clearMarkerButton.Size = new Size(163, 23);
+            clearMarkerButton.TabIndex = 2;
+            clearMarkerButton.Text = "Clear Markers";
+            clearMarkerButton.UseVisualStyleBackColor = true;
+            clearMarkerButton.Click += clearMarkers;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 720);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            Controls.Add(clearMarkerButton);
+            Controls.Add(mapImage);
             Controls.Add(loadImgButton);
             Name = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mapImage).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Button loadImgButton;
         private OpenFileDialog openFileDialog1;
-        private PictureBox pictureBox1;
-        private Button button1;
+        private PictureBox mapImage;
+        private Button clearMarkerButton;
     }
 }
